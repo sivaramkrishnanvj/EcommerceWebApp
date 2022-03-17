@@ -1,0 +1,27 @@
+
+.home{
+    max-width: 1500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+.home_image{
+  
+    margin-top:-30px;
+    height:500px;
+    background-position: contain;
+    object-fit: cover;
+    width: 100%;
+    mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0));
+    z-index: -1;
+    margin-bottom: -100px;
+}
+
+.home-row{
+    display: flex;
+   z-index: 1;
+   margin-left: 5px;
+   margin-right: 5px;
+}
