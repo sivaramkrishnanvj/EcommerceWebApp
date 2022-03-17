@@ -1,7 +1,7 @@
 import axios from 'axios'
 import { useFormik } from 'formik'
 import React from 'react'
-import { useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import "./Login.css"
 
 function Login() {
@@ -30,13 +30,13 @@ function Login() {
                <div className='row'>
                    <div className='col-lg-4'>
                    <label>Email</label>
-           <input type="email" name='email' value={formik.values.email} onChange={formik.handleChange} className="form-control"></input>
+           <input type="email" name='email' value={formik.values.email} onChange={formik.handleChange} className="form-control" required></input>
                    </div>
                </div>
                <div className='row'>
                    <div className='col-lg-4'>
                    <label>Password</label>
-           <input type="password" name='password' value={formik.values.password} onChange={formik.handleChange} className="form-control"></input>
+           <input type="password" name='password' value={formik.values.password} onChange={formik.handleChange} className="form-control" required></input>
                    </div>
                </div>
                <div className='row mt-3 mb-2'>
@@ -44,7 +44,7 @@ function Login() {
            <input type="Submit" className="btn btn-primary btn-sm"></input>
                    </div>
                </div>
-               <button className='btn btn-primary'>Register</button>
+               <Link to="/register" className='btn btn-primary'>Register</Link>
            </div>
             
        </form>

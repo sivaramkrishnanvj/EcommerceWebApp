@@ -4,8 +4,9 @@ import "./Topbar.css";
 import "./App.css";
 import { useStateValue } from "./State";
 function Topbar() {
+  
   const[{cart}] = useStateValue();
-  console.log(cart);
+
   return (
     <nav className="header">
       <Link className="header_link" to="/home">
@@ -22,13 +23,13 @@ function Topbar() {
 
       <div className="header_nav">
       <Link className="header_link" to="/login"> <div className="header_option">
-          <span  className="header_option1">Hello</span>
+          
           <span className="header_option2">Sign In</span>
           </div></Link>
           
           <Link className="header_link" to="/"> <div className="header_option">
-          <span className="header_option1">Returns</span>
-          <span className="header_option2"> & Orders</span>
+        
+          <span className="header_option2">  Orders</span>
           </div></Link>
 
           <Link className="header_link" to="/"><div className="header_option">

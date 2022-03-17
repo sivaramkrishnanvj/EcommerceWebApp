@@ -1,4 +1,3 @@
-import { Title } from "@material-ui/icons";
 import React from "react";
 import "./Checkout.css";
 import Checkoutproduct from "./Checkoutproduct";
@@ -8,7 +7,7 @@ import { useStateValue } from "./State";
 function Checkout() {
   const [{cart}] = useStateValue();
 
-  console.log(cart);
+
   return (
     <div className="checkout">
      <div className="checkoutleft">

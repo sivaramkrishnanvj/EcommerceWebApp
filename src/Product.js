@@ -4,16 +4,17 @@ import { useStateValue } from './State'
 
 
 function Product({id,title,img,price,rating}) {
-    const[{},dispatch] = useStateValue();
+    const[{cart},dispatch] = useStateValue();
     const addToCart = () => {
      dispatch({
          type:"ADD_TO_CART",
-         id:id,
-         title:title,
-         img:img,
-         price:price,
-         rating:rating,
-     });
+        item:{
+            id:id,
+            title:title,
+            img:img,
+            price:price,
+            rating:rating,
+     }    });
     };
   return (
     <div className='product'>

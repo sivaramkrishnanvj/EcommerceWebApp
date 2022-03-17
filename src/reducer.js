@@ -4,8 +4,8 @@ export const initialState ={
     user: null,
 };
 
-const reducer=(state,action)=>{
-   
+function reducer(state,action){
+  
     switch(action.type){
         case 'ADD_TO_CART':
             return {
@@ -23,7 +23,7 @@ const reducer=(state,action)=>{
                     `Cant remove the item(id:${action.id}) as it is not in Cart`
                 );
             } 
-            return {...state , newCart};
+            return {...state , cart:newCart};
                
                 default:
                     return state;
